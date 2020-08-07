@@ -1,0 +1,63 @@
+
+@BASE_URL=http://localhost:3000/api
+GET {{BASE_URL}}
+
+###
+GET {{BASE_URL}}/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWY2Mjg1ZGM1M2UwMjM2Mjg0ZmRkZDYiLCJpYXQiOjE1OTMyNDE1ODgsImV4cCI6MTU5MzI0NTE4OH0.wdSdhWqs3A4Zn2LBA1-BJmxToDWLqcRXzhQLujZlckU
+
+
+###
+GET {{BASE_URL}}/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWY2Mjg1ZGM1M2UwMjM2Mjg0ZmRkZDYiLCJpYXQiOjE1OTMyNDE1ODgsImV4cCI6MTU5MzI0NTE4OH0.wdSdhWqs3A4Zn2LBA1-BJmxToDWLqcRXzhQLujZlckU
+
+###
+POST {{BASE_URL}}/users/addUser
+Content-Type: application/json
+
+{
+    "name":"Yunus Ç.",
+    "userName":"w",
+    "email":"yunuscag13222@example.com",
+    "password":"654321"
+}
+###
+PATCH  {{BASE_URL}}/users/5eec9722b4f2ea29f0ad1cc8
+Content-Type: application/json
+
+{
+    "name":"Hasan Çağlıyan",
+    "userName":"ems",
+    "email":"yunuscag4@example.com",
+    "password":"654321"
+
+}
+###
+DELETE {{BASE_URL}}/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWY2Mjg1ZGM1M2UwMjM2Mjg0ZmRkZDYiLCJpYXQiOjE1OTMyNDE1ODgsImV4cCI6MTU5MzI0NTE4OH0.wdSdhWqs3A4Zn2LBA1-BJmxToDWLqcRXzhQLujZlckU
+
+###
+PATCH  {{BASE_URL}}/users/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWY2Mjg1ZGM1M2UwMjM2Mjg0ZmRkZDYiLCJpYXQiOjE1OTMyNDE1ODgsImV4cCI6MTU5MzI0NTE4OH0.wdSdhWqs3A4Zn2LBA1-BJmxToDWLqcRXzhQLujZlckU
+
+{
+    "name":"Yunus Ç.",
+    "userName":"nebukadnezar",
+    "email":"yunus.0190@hotmail.com",
+    "password":"654321"
+
+}
+###
+POST {{BASE_URL}}/users/login
+Content-Type: application/json
+
+{
+    "email":"yunuscag5@example.com",
+    "password":"654321"
+}
+###
+GET {{BASE_URL}}/users/deleteAll
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWY2Mjg1ZGM1M2UwMjM2Mjg0ZmRkZDYiLCJpYXQiOjE1OTMyNDE1ODgsImV4cCI6MTU5MzI0NTE4OH0.wdSdhWqs3A4Zn2LBA1-BJmxToDWLqcRXzhQLujZlckU
+
